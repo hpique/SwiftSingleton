@@ -43,8 +43,6 @@ class SingletonB {
 
 Unlike classes, structs do support static constants. By using a nested struct we can leverage its static constant as a class constant.
 
-I have my doubts if approach B is thread safe. It depends on how function structs are initialized, and I couldn't find any documentation about this.
-
 ### Approach C: dispatch_once
 
 The traditional Objective-C approach ported to Swift.
