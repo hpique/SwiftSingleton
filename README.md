@@ -5,7 +5,7 @@ An exploration of the Singleton pattern in Swift.
 
 All approaches below support lazy initialization and thread safety. Or so it seems. 
 
-Issues and pull requests welcomed.
+Issues and pull requests welcome.
 
 ### Approach A: Global constant
 
