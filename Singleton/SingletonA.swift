@@ -13,7 +13,13 @@ let _SingletonASharedInstance = SingletonA()
 // Extending NSObject is not necessary. Doing it to use XCTest macros.
 
 class SingletonA : NSObject {
+    
     class var sharedInstance : SingletonA {
         return _SingletonASharedInstance
     }
+    
+    init() {
+        println("AAA");
+    }
+    
 }

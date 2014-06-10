@@ -37,6 +37,21 @@
                BlueprintName = "SingletonTests"
                ReferencedContainer = "container:Singleton.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "LazyLoadingTests/testSomething()">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A0B37C521946CE2200F92198"
+               BuildableName = "LazyLoadingTests.xctest"
+               BlueprintName = "LazyLoadingTests"
+               ReferencedContainer = "container:Singleton.xcodeproj">
+            </BuildableReference>
          </TestableReference>
       </Testables>
    </TestAction>

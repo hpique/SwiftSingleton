@@ -17,4 +17,8 @@ class SingletonB : NSObject {
         return Static.instance
     }
     
+    init() {
+        println("BBB");
+    }
+    
 }
