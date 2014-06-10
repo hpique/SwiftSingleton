@@ -1,7 +1,7 @@
 SwiftSingleton
 ==============
 
-An exploration of the Singleton pattern in Swift.
+An exploration of the Singleton pattern in Swift. Issues and pull requests welcomed.
 
 ### Approach A: Global constant
 
