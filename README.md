@@ -1,9 +1,7 @@
 SwiftSingleton
 ==============
 
-An exploration of the Singleton pattern in Swift. 
-
-All approaches below support lazy initialization and thread safety. Or so it seems. 
+An exploration of the Singleton pattern in Swift. All approaches below support lazy initialization and thread safety.
 
 Issues and pull requests welcome.
 
@@ -22,9 +20,7 @@ class SingletonA  {
 ```
 We use a global constant because class constants are not yet supported.
 
-It should be noted that Swift lazily initializes global constants (and variables).
-
-By definition of `let`, this must be thread-safe. 
+This approach supports lazy initialization because Swift lazily initializes global constants (and variables), and is thread safe by the definition of `let`.
 
 ### Approach B: Nested struct
 
