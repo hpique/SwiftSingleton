@@ -1,7 +1,11 @@
 SwiftSingleton
 ==============
 
-An exploration of the Singleton pattern in Swift. Issues and pull requests welcomed.
+An exploration of the Singleton pattern in Swift. 
+
+All approaches below support lazy initialization and thread safety. Or so it seems. 
+
+Issues and pull requests welcomed.
 
 ### Approach A: Global constant
 
@@ -16,6 +20,8 @@ class SingletonA  {
     
 }
 ```
+
+It should be noted that global constants (and variables) are lazily loaded in Swift.
 
 ### Approach B: Nested struct
 
