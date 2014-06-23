@@ -1,6 +1,8 @@
 SwiftSingleton
 ==============
 
+_tl;dr: Use the nested struct approach outlined below._
+
 An exploration of the Singleton pattern in Swift. All approaches below support lazy initialization and thread safety.
 
 Issues and pull requests welcome.
@@ -22,6 +24,8 @@ We use a global constant because class constants are not yet supported.
 
 This approach supports lazy initialization because Swift lazily initializes global constants (and variables), and is thread safe by the definition of `let`.
 
+In a future version of Swift, we should be able to make this global constant private, which would make this the best approach.
+
 ### Approach B: Nested struct
 
 ```swift
@@ -38,6 +42,8 @@ class SingletonB {
 ```
 
 Unlike classes, structs do support static constants. By using a nested struct we can leverage its static constant as a class constant.
+
+This is the approach I recommend.
 
 ### Approach C: dispatch_once
 
@@ -58,3 +64,5 @@ class SingletonC {
     }
 }
 ```
+
+I'm fairly certain there's no advantage over the nested struct approach but I'm including it anyway as I find the differences in syntax interesting.
