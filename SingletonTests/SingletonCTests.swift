@@ -19,13 +19,13 @@ class SingletonCTests: XCTestCase {
     func testSharedInstance_Unique() {
         let instance1 = SingletonC()
         let instance2 = SingletonC.sharedInstance
-        XCTAssertNotEqualObjects(instance1, instance2, "")
+        XCTAssertNotEqual(instance1, instance2, "")
     }
     
     func testSharedInstance_Twice() {
         let instance1 = SingletonC.sharedInstance
         let instance2 = SingletonC.sharedInstance
-        XCTAssertEqualObjects(instance1, instance2, "")
+        XCTAssertEqual(instance1, instance2, "")
     }
     
     func testSharedInstance_ThreadSafety() {
@@ -43,8 +43,8 @@ class SingletonCTests: XCTestCase {
             expectation2.fulfill()
         }
         
-        waitForExpectationsWithTimeout(1) { (_) in
-            XCTAssertEqualObjects(instance1, instance2, "")
+        waitForExpectationsWithTimeout(1.0) { (_) in
+            XCTAssertEqual(instance1!, instance2!, "")
         }
     }
     
