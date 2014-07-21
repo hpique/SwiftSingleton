@@ -10,7 +10,7 @@ Issues and pull requests welcome.
 ### Approach A: Global constant
 
 ```swift
-let _SingletonASharedInstance = SingletonA()
+private let _SingletonASharedInstance = SingletonA()
 
 class SingletonA  {
 
@@ -23,8 +23,6 @@ class SingletonA  {
 We use a global constant because class constants are not yet supported.
 
 This approach supports lazy initialization because Swift lazily initializes global constants (and variables), and is thread safe by the definition of `let`.
-
-In a future version of Swift, we should be able to make this global constant private, which would make this the best approach.
 
 ### Approach B: Nested struct
 
@@ -43,7 +41,7 @@ class SingletonB {
 
 Unlike classes, structs do support static constants. By using a nested struct we can leverage its static constant as a class constant.
 
-This is the approach I recommend.
+This is the approach I recommend until class constants are supported.
 
 ### Approach C: dispatch_once
 

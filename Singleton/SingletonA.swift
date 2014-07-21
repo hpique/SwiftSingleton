@@ -8,7 +8,7 @@
 
 import Foundation
 
-let _SingletonASharedInstance = SingletonA()
+private let _SingletonASharedInstance = SingletonA()
 
 // Extending NSObject is not necessary. Doing it to use XCTest macros.
 
