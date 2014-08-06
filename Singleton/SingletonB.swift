@@ -17,7 +17,7 @@ class SingletonB : NSObject {
         return Static.instance
     }
     
-    init() {
+    override init() {
         println("BBB");
     }
     

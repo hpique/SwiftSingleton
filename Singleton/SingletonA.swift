@@ -18,7 +18,7 @@ class SingletonA : NSObject {
         return _SingletonASharedInstance
     }
     
-    init() {
+    override init() {
         println("AAA");
     }
     
