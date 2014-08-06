@@ -21,7 +21,7 @@ class SingletonC : NSObject {
         return Static.instance!
     }
     
-    init() {
+    override init() {
         println("CCC");
     }
     
