@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SingletonC : NSObject {
+class SingletonC {
     
     class var sharedInstance : SingletonC {
         struct Static {
@@ -21,7 +21,7 @@ class SingletonC : NSObject {
         return Static.instance!
     }
     
-    override init() {
+    init() {
         println("CCC");
     }
     

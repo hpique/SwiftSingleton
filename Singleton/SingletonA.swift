@@ -10,15 +10,13 @@ import Foundation
 
 private let _SingletonASharedInstance = SingletonA()
 
-// Extending NSObject is not necessary. Doing it to use XCTest macros.
-
-class SingletonA : NSObject {
+class SingletonA {
     
     class var sharedInstance : SingletonA {
         return _SingletonASharedInstance
     }
     
-    override init() {
+    init() {
         println("AAA");
     }
     
