@@ -29,8 +29,8 @@ class SingletonATests: XCTestCase {
     }
 
     func testSharedInstance_ThreadSafety() {
-        var instance1 : SingletonA?
-        var instance2 : SingletonA?
+        var instance1 : SingletonA!
+        var instance2 : SingletonA!
         
         let expectation1 = expectationWithDescription("Instance 1")
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
