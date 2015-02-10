@@ -23,7 +23,7 @@ class SingletonA {
 
 This approach supports lazy initialization because Swift lazily initializes class constants (and variables), and is thread safe by the definition of `let`.
 
-*Note that this approach only works with Swift 1.2+. To support earlier versions as well, see the other approaches.*
+*Note that this approach only works with Swift 1.2+. To support earlier versions, see the other approaches.*
 
 ### Approach B: Nested struct
 
@@ -40,7 +40,7 @@ class SingletonB {
 }
 ```
 
-This is an alternative construct that even works for all Swift versions (1.0+).
+This is an alternative construct that also works for earlier versions of Swift (1.0+).
 
 ### Approach C: dispatch_once
 
