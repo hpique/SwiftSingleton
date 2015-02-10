@@ -1,28 +1,29 @@
 SwiftSingleton
 ==============
 
-_tl;dr: Use the nested struct approach outlined below._
+**_tl;dr**: Use the **class constant approach** outlined below if you are using **Swift 1.2+** and the **nested struct** if you need to support earlier versions.
 
 An exploration of the Singleton pattern in Swift. All approaches below support lazy initialization and thread safety.
 
 Issues and pull requests welcome.
 
-### Approach A: Global constant
+### Approach A: Class constant
 
 ```swift
-private let _SingletonASharedInstance = SingletonA()
-
-class SingletonA  {
-
-    class var sharedInstance : SingletonA {
-        return _SingletonASharedInstance
+class SingletonA {
+    
+    static let sharedInstance: SingletonA = SingletonA()
+    
+    init() {
+        println("AAA");
     }
     
 }
 ```
-We use a global constant because class constants are not yet supported.
 
-This approach supports lazy initialization because Swift lazily initializes global constants (and variables), and is thread safe by the definition of `let`.
+This approach supports lazy initialization because Swift lazily initializes class constants (and variables), and is thread safe by the definition of `let`.
+
+*Note that this approach only works with Swift 1.2+. To support earlier versions as well, see the other approaches.*
 
 ### Approach B: Nested struct
 
@@ -39,9 +40,7 @@ class SingletonB {
 }
 ```
 
-Unlike classes, structs do support static constants. By using a nested struct we can leverage its static constant as a class constant.
-
-This is the approach I recommend until class constants are supported.
+This is an alternative construct that even works for all Swift versions (1.0+).
 
 ### Approach C: dispatch_once
 
