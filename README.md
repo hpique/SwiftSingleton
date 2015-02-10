@@ -1,7 +1,7 @@
 SwiftSingleton
 ==============
 
-**_tl;dr**: Use the **class constant approach** outlined below if you are using **Swift 1.2+** and the **nested struct** if you need to support earlier versions.
+_tl;dr: Use the **class constant approach** outlined below if you are using **Swift 1.2+** and the **nested struct** if you need to support earlier versions._
 
 An exploration of the Singleton pattern in Swift. All approaches below support lazy initialization and thread safety.
 
