@@ -8,13 +8,9 @@
 
 import Foundation
 
-private let _SingletonASharedInstance = SingletonA()
-
 class SingletonA {
     
-    class var sharedInstance : SingletonA {
-        return _SingletonASharedInstance
-    }
+    static let sharedInstance : SingletonA = SingletonA()
     
     init() {
         println("AAA");
