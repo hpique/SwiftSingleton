@@ -1,7 +1,7 @@
 SwiftSingleton
 ==============
 
-_tl;dr: Use the **class constant approach** outlined below if you are using **Swift 1.2+** and the **nested struct** if you need to support earlier versions._
+_tl;dr: Use the **class constant** approach if you are using Swift 1.2 or above and the **nested struct** approach if you need to support earlier versions._
 
 An exploration of the Singleton pattern in Swift. All approaches below support lazy initialization and thread safety.
 
@@ -23,7 +23,7 @@ class SingletonA {
 
 This approach supports lazy initialization because Swift lazily initializes class constants (and variables), and is thread safe by the definition of `let`.
 
-*Note that this approach only works with Swift 1.2+. To support earlier versions, see the other approaches.*
+Class constants were introduced in Swift 1.2. If you need to support an earlier version of Swift, use the nested struct approach below or a global constant.
 
 ### Approach B: Nested struct
 
@@ -40,7 +40,7 @@ class SingletonB {
 }
 ```
 
-This is an alternative construct that also works for earlier versions of Swift (1.0+).
+Here we are using the static constant of a nested struct as a class constant. This is a workaround for the lack of static class constants in Swift 1.1 and earlier, and still works as a workaround for the lack of static constants and variables in functions.
 
 ### Approach C: dispatch_once
 
