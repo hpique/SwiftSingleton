@@ -3,18 +3,15 @@
 //  Singleton
 //
 //  Created by Hermes Pique on 6/9/14.
+//  Updated by Cihat Gündüz on 2/10/15.
 //  Copyright (c) 2014 Hermes Pique. All rights reserved.
 //
 
 import Foundation
 
-private let _SingletonASharedInstance = SingletonA()
-
 class SingletonA {
     
-    class var sharedInstance : SingletonA {
-        return _SingletonASharedInstance
-    }
+    static let sharedInstance: SingletonA = SingletonA()
     
     init() {
         println("AAA");
