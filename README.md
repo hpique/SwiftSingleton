@@ -30,9 +30,9 @@ This approach supports lazy initialization because Swift lazily initializes clas
 ```swift
 class SingletonB {
     
-    class var sharedInstance : SingletonB {
+    class var sharedInstance: SingletonB {
         struct Static {
-            static let instance : SingletonB = SingletonB()
+            static let instance: SingletonB = SingletonB()
         }
         return Static.instance
     }
@@ -49,10 +49,10 @@ The traditional Objective-C approach ported to Swift.
 ```swift
 class SingletonC {
     
-    class var sharedInstance : SingletonC {
+    class var sharedInstance: SingletonC {
         struct Static {
-            static var onceToken : dispatch_once_t = 0
-            static var instance : SingletonC? = nil
+            static var onceToken: dispatch_once_t = 0
+            static var instance: SingletonC? = nil
         }
         dispatch_once(&Static.onceToken) {
             Static.instance = SingletonC()
