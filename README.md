@@ -12,7 +12,7 @@ Issues and pull requests welcome.
 ```swift
 class SingletonA {
     
-    static let sharedInstance: SingletonA = SingletonA()
+    static let sharedInstance = SingletonA()
     
     init() {
         println("AAA");
