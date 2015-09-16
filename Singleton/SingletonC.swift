@@ -21,7 +21,7 @@ class SingletonC {
         return Static.instance!
     }
     
-    init() {
+    private init() {
         print("CCC");
     }
     

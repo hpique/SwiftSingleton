@@ -17,7 +17,7 @@ class SingletonB {
         return Static.instance
     }
     
-    init() {
+    private init() {
         print("BBB");
     }
     

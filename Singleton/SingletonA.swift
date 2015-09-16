@@ -12,7 +12,7 @@ class SingletonA {
     
     static let sharedInstance: SingletonA = SingletonA()
     
-    init() {
+    private init() {
         print("AAA");
     }
     
