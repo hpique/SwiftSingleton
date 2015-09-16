@@ -22,7 +22,7 @@ class SingletonC {
     }
     
     init() {
-        println("CCC");
+        print("CCC");
     }
     
 }
