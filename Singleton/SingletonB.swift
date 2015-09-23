@@ -18,7 +18,7 @@ class SingletonB {
     }
     
     init() {
-        println("BBB");
+        print("BBB");
     }
     
 }
