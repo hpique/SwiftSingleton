@@ -25,6 +25,14 @@ This approach supports lazy initialization because Swift lazily initializes clas
 
 Class constants were introduced in Swift 1.2. If you need to support an earlier version of Swift, use the nested struct approach below or a global constant.
 
+If you are using Swift 3.0.1 or above, the `init` method definition must be preceeded by the [`override` keyword][override]:
+
+```swift
+    override init() {
+        println("AAA");
+    }
+```
+
 ### Approach B: Nested struct
 
 ```swift
@@ -63,3 +71,5 @@ class SingletonC {
 ```
 
 I'm fairly certain there's no advantage over the nested struct approach but I'm including it anyway as I find the differences in syntax interesting.
+
+  [override]: https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Inheritance.html#//apple_ref/doc/uid/TP40014097-CH17-ID196
